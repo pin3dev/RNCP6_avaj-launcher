@@ -16,20 +16,16 @@ public class AircraftFactory {
      *
      * @param type          aircraft type
      * @param name          aircraft name
-     * @param coordenates   aircraft coordinates
+     * @param coordinates   aircraft coordinates
      * @return a Flyable aircraft instance
      * @throws IllegalArgumentException if the aircraft type is unknown
      */
     public static Flyable newAircraft(String type, String name, Coordinates coordinates) {
-        switch (type.toUpperCase()) {
-            case "HELICOPTER":
-                return new Helicopter(name, coordinates);
-            case "JETPLANE":
-                return new JetPlane(name, coordinates);
-            case "BALLOON":
-                return new Balloon(name, coordinates);
-            default:
-                throw new IllegalArgumentException("Unknown aircraft type: " + type);
-        }
+        return switch (type.toUpperCase()) {
+            case "HELICOPTER" -> new Helicopter(name, coordinates);
+            case "JETPLANE" -> new JetPlane(name, coordinates);
+            case "BALLOON" -> new Balloon(name, coordinates);
+            default -> throw new IllegalArgumentException("Unknown aircraft type: " + type);
+        };
     }
 }

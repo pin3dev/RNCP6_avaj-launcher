@@ -18,12 +18,12 @@ import com.ft.pckg.weather.Weather;
 public class JetPlane extends Aircraft {
 
     /** Sun increases */
-    static final int SUN_LAT_CHANGE = +10;
-    static final int SUN_HGT_CHANGE = +2;
+    static final int SUN_LAT_CHANGE = 10;
+    static final int SUN_HGT_CHANGE = 2;
     /** Rain increases */
-    static final int RAIN_LAT_CHANGE = +5;
+    static final int RAIN_LAT_CHANGE = 5;
     /** Fog increases */
-    static final int FOG_LAT_CHANGE = +1;
+    static final int FOG_LAT_CHANGE = 1;
     /** Snow decreases */
     static final int SNOW_HGT_CHANGE = -7;
 
@@ -41,26 +41,26 @@ public class JetPlane extends Aircraft {
      * Apply weather effects to the jetplane.
      */
     @Override
-    protected void applyWeather(Weather weather)  {
-
-        switch (weather) {
-            case SUN:
+    protected void applyWeather(Weather weather) {
+        switch(weather) {
+            case SUN -> {
                 coordinates.moveLatPoint(SUN_LAT_CHANGE);
                 coordinates.moveHeightPoint(SUN_HGT_CHANGE);
-                System.out.println("[" + this + "]: ☀️☀️☀️   🛩️   ☀️☀️☀️");
-                break;
-            case RAIN:
+                System.out.println("[" + this + "]: ☀️☀️☀️   ✈️   ☀️☀️☀️");
+            }
+            case RAIN -> {
                 coordinates.moveLatPoint(RAIN_LAT_CHANGE);
-                System.out.println("[" + this + "]: 💦💦💦   🛩️   💦💦💦");
-                break;
-            case FOG:
+                System.out.println("[" + this + "]: 💦💦💦   ✈️   💦💦💦");
+            }
+            case FOG -> {
                 coordinates.moveLatPoint(FOG_LAT_CHANGE);
-                System.out.println(this + ": 🌫️🌫️🌫️   🛩️   🌫️🌫️🌫️");
-                break;
-            case SNOW:
+                System.out.println(this + ": 🌫️🌫️🌫️   ✈️   🌫️🌫️🌫️");
+            }
+            case SNOW -> {
                 coordinates.moveHeightPoint(SNOW_HGT_CHANGE);
-                System.out.println("[" + this + "]: ❄️❄️❄️   🛩️   ❄️❄️❄️");
-                break;
+                System.out.println("[" + this + "]: ❄️❄️❄️   ✈️   ❄️❄️❄️");
+            }
         }
     }
+
 }

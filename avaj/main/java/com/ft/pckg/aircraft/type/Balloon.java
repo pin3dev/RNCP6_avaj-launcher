@@ -18,8 +18,8 @@ import com.ft.pckg.weather.Weather;
 public class Balloon extends Aircraft {
 
     /** Sun increases */
-    static final int SUN_LONG_CHANGE = +2;
-    static final int SUN_HGT_CHANGE = +4;
+    static final int SUN_LONG_CHANGE = 2;
+    static final int SUN_HGT_CHANGE = 4;
     /** Rain increases */
     static final int RAIN_HGT_CHANGE = -5;
     /** Fog increases */
@@ -42,25 +42,25 @@ public class Balloon extends Aircraft {
      */
     @Override
     protected void applyWeather(Weather weather) {
-
-        switch (weather) {
-            case SUN:
+        switch(weather) {
+            case SUN -> {
                 coordinates.moveLongPoint(SUN_LONG_CHANGE);
                 coordinates.moveHeightPoint(SUN_HGT_CHANGE);
-                System.out.println("[" + this + "]: ☀️☀️☀️   🛩️   ☀️☀️☀️");
-                break;
-            case RAIN:
+                System.out.println("[" + this + "]: ☀️☀️☀️   🎈   ☀️☀️☀️");
+            }
+            case RAIN -> {
                 coordinates.moveHeightPoint(RAIN_HGT_CHANGE);
-                System.out.println("[" + this + "]: 💦💦💦   🛩️   💦💦💦");
-                break;
-            case FOG:
+                System.out.println("[" + this + "]: 💦💦💦   🎈   💦💦💦");
+            }
+            case FOG -> {
                 coordinates.moveHeightPoint(FOG_HGT_CHANGE);
-                System.out.println(this + ": 🌫️🌫️🌫️   🛩️   🌫️🌫️🌫️");
-                break;
-            case SNOW:
+                System.out.println(this + ": 🌫️🌫️🌫️   🎈   🌫️🌫️🌫️");
+            }
+            case SNOW -> {
                 coordinates.moveHeightPoint(SNOW_HGT_CHANGE);
-                System.out.println("[" + this + "]: ❄️❄️❄️   🛩️   ❄️❄️❄️");
-                break;
+                System.out.println("[" + this + "]: ❄️❄️❄️   🎈   ❄️❄️❄️");
+            }
         }
     }
+
 }
