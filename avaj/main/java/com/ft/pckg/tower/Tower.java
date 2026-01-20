@@ -28,7 +28,7 @@ public abstract class Tower {
      */
     public void register(Flyable flyable) {
         observers.add(flyable);
-        System.out.println("[Tower]: " + this + " registered to weather tower.");
+        System.out.println("[Tower]: " + flyable + " registered to weather tower.");
     }
 
     /**
@@ -38,7 +38,7 @@ public abstract class Tower {
      */
     public void unregister(Flyable flyable) {
         observers.remove(flyable);
-        System.out.println("[Tower]: " + this + " unregistered from weather tower.");
+        System.out.println("[Tower]: " + flyable + " unregistered from weather tower.");
     }
 
     /**

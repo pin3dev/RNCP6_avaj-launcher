@@ -32,7 +32,7 @@ compile:
 # Run simulator
 # =====================
 run: compile
-	$(JAVA) -cp $(BIN_DIR) com.ft.pckg.simulator.Simulator scenario.txt
+	$(JAVA) -cp $(BIN_DIR) com.ft.pckg.simulator.Simulator test/resources/scenario.txt
 
 # =====================
 # Clean build artifacts

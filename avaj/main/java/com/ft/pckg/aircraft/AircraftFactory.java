@@ -24,7 +24,7 @@ public class AircraftFactory {
         return switch (type.toUpperCase()) {
             case "HELICOPTER" -> new Helicopter(name, coordinates);
             case "JETPLANE" -> new JetPlane(name, coordinates);
-            case "BALLOON" -> new Balloon(name, coordinates);
+            case "BALOON" -> new Balloon(name, coordinates);
             default -> throw new IllegalArgumentException("Unknown aircraft type: " + type);
         };
     }
