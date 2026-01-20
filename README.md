@@ -1,13 +1,16 @@
-<h1 align="center">avaj-launcher</h1>
+<h1 align="center">✈️ Avaj Launcher</h1>
 <p align="center">
   <img src="https://img.shields.io/badge/grade-0%2F100-green?style=for-the-badge&logo=42&labelColor=gray"/>
 </p>
 
 <p align="center">
   <a href="https://github.com/pin3dev/42_Cursus/tree/main/so_long">
+    <img src="https://img.shields.io/badge/UML-blue?style=for-the-badge"/>
     <img src="https://img.shields.io/badge/Java-blue?style=for-the-badge"/>
     <img src="https://img.shields.io/badge/Singleton-blue?style=for-the-badge"/>
-    <img src="https://img.shields.io/badge/UML-blue?style=for-the-badge"/>
+    <img src="https://img.shields.io/badge/Observer-blue?style=for-the-badge"/>
+    <img src="https://img.shields.io/badge/Factory-blue?style=for-the-badge"/>
+    <img src="https://img.shields.io/badge/GoF-blue?style=for-the-badge"/>
   </a>
 </p>
 
@@ -27,8 +30,6 @@
     <a href="#contributors">Contributors</a>
   </p>
 </h3>
-
-# ✈️ Avaj Launcher
 
 ## 🗣️ Introduction <a id="introduction"></a>
 

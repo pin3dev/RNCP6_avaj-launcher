@@ -1,0 +1,43 @@
+# =========================
+# Java (bytecode / runtime)
+# =========================
+*.class
+*.jar
+*.war
+*.ear
+hs_err_pid*
+
+# =========================
+# Compilation artifacts
+# =========================
+sources.txt
+simulation.txt
+
+# =========================
+# Editor / OS garbage
+# =========================
+*~
+.LCK*
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+
+# =========================
+# VS Code
+# =========================
+.vscode/
+
+# =========================
+# Logs
+# =========================
+*.log
+
+# =========================
+# Temporary / backup files
+# =========================
+*.tmp
+*.temp
+*.bak
+*.old
+*.backup
