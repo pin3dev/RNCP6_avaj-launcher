@@ -131,3 +131,11 @@ Full requirements are described in the project documentation.
 <a href="https://github.com/clima-fr">
   <img src="https://img.shields.io/badge/Clara_Franco-%40clima--fr-purple?style=for-the-badge"/>  
 </a>
+
+links:
+https://docs.oracle.com/javase/tutorial/java/package/namingpkgs.html
+https://www.baeldung.com/java-random-seed
+https://refactoring.guru/pt-br/design-patterns/observer/java/example
+https://www.coursera.org/articles/gang-of-four-design-patterns?utm_medium=sem&utm_source=gg&utm_campaign=b2c_emea_x_multi_ftcof_career-academy_cx_dr_bau_gg_pmax_gc_s1_en_m_hyb_23-12_desktop&campaignid=20858198824&adgroupid=&device=c&keyword=&matchtype=&network=x&devicemodel=&creativeid=&assetgroupid=6490027433&targetid=&extensionid=&placement=&gad_source=1&gad_campaignid=20854471652&gbraid=0AAAAADdKX6YD7VoJg5yizZLsrsfLHzNSm&gclid=CjwKCAiAybfLBhAjEiwAI0mBBl6Vc1DUVPEPJ1tuFo29dLI4C4P4KgN8vUZUHv_1QZYztqht02sZ9xoCFu0QAvD_BwE
+https://www.digitalocean.com/community/tutorials/gangs-of-four-gof-design-patterns
+
