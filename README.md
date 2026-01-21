@@ -60,16 +60,20 @@ The project is organized into several core logical components:
 
 These components work together to model coordinated behavior in a controlled environment, encouraging modular and scalable architecture design.
 
-<!--
 ## 🗃️ Documentation <a id="docs"></a>
 
-For full technical documentation, UML diagrams, detailed architecture descriptions, and usage guidelines, visit:
+This project provides complete technical documentation generated with Javadoc,
+covering the class hierarchy, package organization, and core behaviors of the
+simulation.
+
+The documentation can be accessed via the HTML entry point below:
 
 <p align="center">
-  <a href="#">
+  <a href="https://pin3dev.github.io/RNCP6_avaj-launcher/">
     <img src="https://img.shields.io/badge/Avaj_Docs-blue?style=for-the-badge"/>
   </a>
 </p>
+<!--
 
 
 ## 🫥 Cloning the Repository <a id="cloning"></a>
@@ -77,8 +81,8 @@ For full technical documentation, UML diagrams, detailed architecture descriptio
 To download the project:
 
 ```bash
-git clone https://github.com/<your_user>/<your_repo>.git
-cd <your_repo>
+git clone https://github.com/pin3dev/RNCP6_avaj-launcher.git
+cd RNCP6_avaj-launcher/avaj
 ```
 
 ## 🕹️ Compilation and Usage <a id="usage"></a>
@@ -88,8 +92,7 @@ cd <your_repo>
 A manual compilation flow is used for this project:
 
 ```bash
-find * -name "*.java" > sources.txt
-javac @sources.txt
+make compile
 ```
 
 ### Running the Simulation
@@ -97,17 +100,19 @@ javac @sources.txt
 Execute the simulator with a scenario file:
 
 ```bash
-java ro.academyplus.avaj.simulator.Simulator scenario.txt
+make run
 ```
 
 A log file describing the full simulation will be generated automatically.
 
+<!--
 
 ## 📄 Scenario File <a id="scenario"></a>
 
 The scenario file describes both the number of simulation cycles and the list of aircraft involved.
 Format explanation and examples are provided in the documentation.
 
+-->
 
 ## ⚠️ Norms and Guidelines Disclaimer <a id="norms"></a>
 
@@ -121,17 +126,13 @@ It emphasizes:
 Full requirements are described in the project documentation.
 
 
-
 ## 👥 Contributors <a id="contributors"></a>
 
 <a href="https://github.com/pin3dev">
   <img src="https://img.shields.io/badge/Ivany_Pinheiro-%40pin3dev-purple?style=for-the-badge"/>  
 </a>
-<br>
-<a href="https://github.com/clima-fr">
-  <img src="https://img.shields.io/badge/Clara_Franco-%40clima--fr-purple?style=for-the-badge"/>  
-</a>
 
+<!--
 links:
 https://docs.oracle.com/javase/tutorial/java/package/namingpkgs.html
 https://www.baeldung.com/java-random-seed
