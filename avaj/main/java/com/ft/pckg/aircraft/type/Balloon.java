@@ -20,9 +20,9 @@ public class Balloon extends Aircraft {
     /** Sun increases */
     static final int SUN_LONG_CHANGE = 2;
     static final int SUN_HGT_CHANGE = 4;
-    /** Rain increases */
+    /** Rain decreases */
     static final int RAIN_HGT_CHANGE = -5;
-    /** Fog increases */
+    /** Fog decreases */
     static final int FOG_HGT_CHANGE = -3;
     /** Snow decreases */
     static final int SNOW_HGT_CHANGE = -15;
