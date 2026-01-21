@@ -10,7 +10,7 @@ JAVADOC = javadoc
 # =====================
 SRC_ROOT = main/java
 BIN_DIR  = bin
-DOCS_DIR  = docs
+DOCS_DIR  = ../docs
 MAIN  = com.ft.pckg.simulator.Simulator
 SCENE = test/resources/scenario.txt
 
@@ -43,6 +43,7 @@ run: compile
 docs:
 	mkdir -p $(DOCS_DIR)
 	$(JAVADOC) -d $(DOCS_DIR) -sourcepath main/java $(SOURCES)
+
 
 # =====================
 # Clean build artifacts
