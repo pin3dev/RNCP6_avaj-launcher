@@ -2,7 +2,6 @@ package com.ft.pckg.aircraft.type;
 
 import com.ft.pckg.aircraft.Aircraft;
 import com.ft.pckg.utils.Coordinates;
-import com.ft.pckg.weather.Weather;
 
 /**
  * Concrete Aircraft implementation representing a Helicopter.
@@ -37,23 +36,34 @@ public class Helicopter extends Aircraft {
         super(name, coordinates);
     }
 
-    /**
-     * Apply weather effects to the helicopter.
+    /**  
+     * Weather-specific handlers to be implemented to the helicopter.
      */
     @Override
-    protected void applyWeather(Weather weather) {
-        switch(weather) {
-            case SUN -> {
-                coordinates.moveLongPoint(SUN_LONG_CHANGE);
-                coordinates.moveHeightPoint(SUN_HGT_CHANGE);
-            }
-            case RAIN -> coordinates.moveLongPoint(RAIN_LONG_CHANGE);
-            case FOG -> coordinates.moveLongPoint(FOG_LONG_CHANGE);
-            case SNOW -> coordinates.moveHeightPoint(SNOW_HGT_CHANGE);
-        }
-        System.out.println("[ " + this + " ] " + weather.getWeatherMessage() + weather.getWeatherEmoji());
+    public void onSun() {
+        coordinates.moveLongPoint(SUN_LONG_CHANGE);
+        coordinates.moveHeightPoint(SUN_HGT_CHANGE);
     }
 
+    @Override
+    public void onRain() {
+        coordinates.moveLongPoint(RAIN_LONG_CHANGE);
+    }
+
+    @Override
+    public void onFog() {
+        coordinates.moveLongPoint(FOG_LONG_CHANGE);
+    }
+
+    @Override
+    public void onSnow() {
+        coordinates.moveHeightPoint(SNOW_HGT_CHANGE);
+    }
+
+
+    /**
+     * Returns the emoji representation of the helicopter.
+     */
     @Override
     protected String getAircraftEmoji() {
         return "🚁";

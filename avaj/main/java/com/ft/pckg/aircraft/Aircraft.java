@@ -32,18 +32,20 @@ public abstract class Aircraft implements Flyable {
 
 
     /**
-     * Applies weather-specific behavior to the aircraft.
-     *
-     * @param weather the current weather condition
-     */
-    protected abstract void applyWeather(Weather weather);
-
-    /**
      * Returns the emoji representation of the aircraft.
      *
      * @return emoji string
      */
     protected abstract String getAircraftEmoji();
+
+
+    /**  
+     * Weather-specific handlers to be implemented by concrete aircraft types.
+     */
+    public abstract void onSun();
+    public abstract void onRain();
+    public abstract void onFog();
+    public abstract void onSnow();
 
     /**
      * Constructs a new Aircraft instance.
@@ -85,6 +87,20 @@ public abstract class Aircraft implements Flyable {
         if (coordinates.getHeight() <= 0) {
             land();
         }
+    }
+
+
+    /**
+     * Applies weather-specific behavior to the aircraft.
+     *
+     * @param weather the current weather condition
+     */
+    protected final void applyWeather(Weather weather) {
+        weather.apply(this);
+        System.out.println("[ " + this + " ] "
+            + weather.getWeatherMessage()
+            + " "
+            + weather.getWeatherEmoji());
     }
 
     /**
