@@ -1,0 +1,11 @@
+40
+Baloon B1 101 101 50
+Baloon B2 102 100 48
+Baloon B3 100 102 52
+JetPlane J1 150 150 60
+JetPlane J2 148 152 58
+JetPlane J3 152 148 62
+Helicopter H1 200 200 70
+Helicopter H2 198 202 68
+Helicopter H3 202 198 72
+Helicopter H4 205 195 69

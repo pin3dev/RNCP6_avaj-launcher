@@ -1,7 +1,6 @@
 package com.ft.pckg.weather;
 
 import com.ft.pckg.utils.Coordinates;
-import java.util.Random;
 
 /**
  * Singleton class responsible for providing weather information
@@ -45,8 +44,8 @@ public class WeatherProvider {
      * @return a string representing the current weather
      */
     public String getCurrentWeather(Coordinates coordinates) {
-        int seed = coordinates.sum();
-        int index = new Random(seed).nextInt(VALUES.length);
+        int sum = coordinates.sum();
+        int index = Math.abs(sum) % VALUES.length;
         return VALUES[index].name();
     }
 }
