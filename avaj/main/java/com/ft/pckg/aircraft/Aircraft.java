@@ -39,6 +39,13 @@ public abstract class Aircraft implements Flyable {
     protected abstract void applyWeather(Weather weather);
 
     /**
+     * Returns the emoji representation of the aircraft.
+     *
+     * @return emoji string
+     */
+    protected abstract String getAircraftEmoji();
+
+    /**
      * Constructs a new Aircraft instance.
      *
      * @param name        aircraft name
@@ -86,7 +93,7 @@ public abstract class Aircraft implements Flyable {
      * @return formatted aircraft string
      */
     @Override
-    public String toString() {
-        return getClass().getSimpleName() + "#" + name + "(" + id + ")";
+    public final String toString() {
+        return getAircraftEmoji() + " " + getClass().getSimpleName() + "#" + name + "(" + id + ")";
     }
 }

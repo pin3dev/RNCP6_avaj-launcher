@@ -46,21 +46,17 @@ public class Balloon extends Aircraft {
             case SUN -> {
                 coordinates.moveLongPoint(SUN_LONG_CHANGE);
                 coordinates.moveHeightPoint(SUN_HGT_CHANGE);
-                System.out.println("[" + this + "]: ☀️☀️☀️   🎈   ☀️☀️☀️");
             }
-            case RAIN -> {
-                coordinates.moveHeightPoint(RAIN_HGT_CHANGE);
-                System.out.println("[" + this + "]: 💦💦💦   🎈   💦💦💦");
-            }
-            case FOG -> {
-                coordinates.moveHeightPoint(FOG_HGT_CHANGE);
-                System.out.println(this + ": 🌫️🌫️🌫️   🎈   🌫️🌫️🌫️");
-            }
-            case SNOW -> {
-                coordinates.moveHeightPoint(SNOW_HGT_CHANGE);
-                System.out.println("[" + this + "]: ❄️❄️❄️   🎈   ❄️❄️❄️");
-            }
+            case RAIN -> coordinates.moveHeightPoint(RAIN_HGT_CHANGE);
+            case FOG -> coordinates.moveHeightPoint(FOG_HGT_CHANGE);
+            case SNOW -> coordinates.moveHeightPoint(SNOW_HGT_CHANGE);
         }
+        System.out.println("[ " + this + " ] " + weather.getWeatherMessage() + " " + weather.getWeatherEmoji());
+    }
+
+    @Override
+    protected String getAircraftEmoji() {
+        return "🎈";
     }
 
 }

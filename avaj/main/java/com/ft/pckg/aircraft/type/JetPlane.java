@@ -46,21 +46,16 @@ public class JetPlane extends Aircraft {
             case SUN -> {
                 coordinates.moveLatPoint(SUN_LAT_CHANGE);
                 coordinates.moveHeightPoint(SUN_HGT_CHANGE);
-                System.out.println("[" + this + "]: ☀️☀️☀️   ✈️   ☀️☀️☀️");
             }
-            case RAIN -> {
-                coordinates.moveLatPoint(RAIN_LAT_CHANGE);
-                System.out.println("[" + this + "]: 💦💦💦   ✈️   💦💦💦");
-            }
-            case FOG -> {
-                coordinates.moveLatPoint(FOG_LAT_CHANGE);
-                System.out.println(this + ": 🌫️🌫️🌫️   ✈️   🌫️🌫️🌫️");
-            }
-            case SNOW -> {
-                coordinates.moveHeightPoint(SNOW_HGT_CHANGE);
-                System.out.println("[" + this + "]: ❄️❄️❄️   ✈️   ❄️❄️❄️");
-            }
+            case RAIN -> coordinates.moveLatPoint(RAIN_LAT_CHANGE);
+            case FOG -> coordinates.moveLatPoint(FOG_LAT_CHANGE);
+            case SNOW -> coordinates.moveHeightPoint(SNOW_HGT_CHANGE);
         }
+        System.out.println("[ " + this + " ] " + weather.getWeatherMessage() + weather.getWeatherEmoji());
     }
 
+    @Override
+    protected String getAircraftEmoji() {
+        return "✈️ ";
+    }
 }

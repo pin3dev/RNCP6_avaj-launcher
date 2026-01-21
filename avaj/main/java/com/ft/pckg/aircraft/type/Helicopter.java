@@ -46,20 +46,16 @@ public class Helicopter extends Aircraft {
             case SUN -> {
                 coordinates.moveLongPoint(SUN_LONG_CHANGE);
                 coordinates.moveHeightPoint(SUN_HGT_CHANGE);
-                System.out.println("[" + this + "]: ☀️☀️☀️   🚁   ☀️☀️☀️");
             }
-            case RAIN -> {
-                coordinates.moveLongPoint(RAIN_LONG_CHANGE);
-                System.out.println("[" + this + "]: 💦💦💦   🚁   💦💦💦");
-            }
-            case FOG -> {
-                coordinates.moveLongPoint(FOG_LONG_CHANGE);
-                System.out.println(this + ": 🌫️🌫️🌫️   🚁   🌫️🌫️🌫️");
-            }
-            case SNOW -> {
-                coordinates.moveHeightPoint(SNOW_HGT_CHANGE);
-                System.out.println("[" + this + "]: ❄️❄️❄️   🚁   ❄️❄️❄️");
-            }
+            case RAIN -> coordinates.moveLongPoint(RAIN_LONG_CHANGE);
+            case FOG -> coordinates.moveLongPoint(FOG_LONG_CHANGE);
+            case SNOW -> coordinates.moveHeightPoint(SNOW_HGT_CHANGE);
         }
+        System.out.println("[ " + this + " ] " + weather.getWeatherMessage() + weather.getWeatherEmoji());
+    }
+
+    @Override
+    protected String getAircraftEmoji() {
+        return "🚁";
     }
 }
