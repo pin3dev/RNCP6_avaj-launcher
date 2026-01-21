@@ -25,7 +25,7 @@ public interface Flyable {
     /**
      * Registers the aircraft to a WeatherTower.
      *
-     * @param weatherTower the WeatherTower to register to
+     * @param p_Tower the WeatherTower to register to
      */
     void registerTower(WeatherTower p_Tower);
 }

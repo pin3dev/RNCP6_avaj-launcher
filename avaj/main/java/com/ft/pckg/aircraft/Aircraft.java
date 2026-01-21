@@ -42,9 +42,14 @@ public abstract class Aircraft implements Flyable {
     /**  
      * Weather-specific handlers to be implemented by concrete aircraft types.
      */
+
+    /** Called when the current weather is sun. */
     public abstract void onSun();
+    /** Called when the current weather is rain. */
     public abstract void onRain();
+    /** Called when the current weather is fog. */
     public abstract void onFog();
+    /** Called when the current weather is snow. */
     public abstract void onSnow();
 
     /**

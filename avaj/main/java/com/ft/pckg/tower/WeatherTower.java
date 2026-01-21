@@ -17,6 +17,9 @@ import com.ft.pckg.weather.WeatherProvider;
  */
 public class WeatherTower extends Tower {
 
+    /** Default constructor. */
+    public WeatherTower() {}
+
     /**
      * Returns the current weather for given coordinates.
      *

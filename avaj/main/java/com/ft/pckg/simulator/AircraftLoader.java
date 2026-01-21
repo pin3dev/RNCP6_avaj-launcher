@@ -4,14 +4,15 @@ import com.ft.pckg.aircraft.AircraftFactory;
 import com.ft.pckg.aircraft.Flyable;
 import com.ft.pckg.tower.WeatherTower;
 import com.ft.pckg.utils.Coordinates;
-
-import java.util.ArrayList;
 import java.util.List;
 
 /**  
  * Loads aircraft from scenario data and registers them to the WeatherTower.
  */
 public class AircraftLoader {
+
+    /** Default constructor. */
+    public AircraftLoader() {}
 
     /**
      * Parses a line of aircraft data and creates a Flyable aircraft.

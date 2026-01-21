@@ -21,6 +21,10 @@ public abstract class Tower {
     /** List of registered listeners. */
     protected List<Flyable> observers = new ArrayList<>();
 
+
+    /** Default constructor. */
+    public Tower() {}
+
     /**
      * Registers a Flyable observer.
      *

@@ -17,27 +17,28 @@ import com.ft.pckg.aircraft.Aircraft;
  * </p>
  */
 public enum Weather {
+    /** Sunny weather condition */
     SUN("☀️", "This is hot.") {
         @Override
         public void apply(Aircraft a) {
             a.onSun();
         }
     },
-
+    /** Rainy weather condition */
     RAIN("🌧️", "Damn you rain!") {
         @Override
         public void apply(Aircraft a) {
             a.onRain();
         }
     },
-
+    /** Foggy weather condition */
     FOG("🌫️", "Can't see anything.") {
         @Override
         public void apply(Aircraft a) {
             a.onFog();
         }
     },
-
+    /** Snowy weather condition */
     SNOW("❄️", "Winter is coming!") {
         @Override
         public void apply(Aircraft a) {

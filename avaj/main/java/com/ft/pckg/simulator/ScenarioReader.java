@@ -12,7 +12,7 @@ import java.util.List;
  * Reads and parses the scenario file.
  * The first line contains the number of simulations to run.
  * Each subsequent line contains aircraft data in the format:
- *                      <TYPE NAME LONGITUDE LATITUDE HEIGHT>
+ *                      TYPE NAME LONGITUDE LATITUDE HEIGHT
  * - TYPE is the aircraft type (e.g., "Helicopter"),
  * - NAME is the aircraft name,
  * - LONGITUDE, LATITUDE, and HEIGHT are integers representing the aircraft's coordinates.
@@ -24,6 +24,8 @@ public class ScenarioReader {
     /** Number of expected columns in the aircraft info lines */
     public static int FILE_AIRCRAFTINFO_COLUMNS = 5;
 
+    /** Default constructor. */
+    public ScenarioReader() {}
 
     /**
      * Represents a simulation scenario.
@@ -31,9 +33,16 @@ public class ScenarioReader {
      */
     public static class Scenario {
         
+        /** Number of simulations to run */
         public final int simulations;
+        /** List of aircraft data, each represented as an array of strings */
         public final List<String[]> aircraftData;
 
+        /** 
+         * Constructor to initialize the scenario.
+         * @param simulations number of simulations
+         * @param aircraftData list of aircraft data arrays
+         */
         public Scenario(int simulations, List<String[]> aircraftData) {
             this.simulations = simulations;
             this.aircraftData = aircraftData;

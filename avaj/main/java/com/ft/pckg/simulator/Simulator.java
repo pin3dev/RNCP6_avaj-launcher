@@ -12,6 +12,15 @@ import com.ft.pckg.tower.WeatherTower;
  * </p>
  */
 public class Simulator {
+
+    /** Default constructor. */
+    public Simulator() {}
+    
+    /**
+     * Main method - entry point of the simulation.
+     *
+     * @param args command line arguments
+     */
     public static void main(String[] args) {
 
         if (args.length != 1) {

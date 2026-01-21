@@ -10,7 +10,9 @@ package com.ft.pckg.utils;
  */
 public final class Coordinates {
 
+    /** Minimum allowed value for longitude, latitude and height*/
     public static final int MIN_VALUE = 0;
+    /** Maximum allowed value for height */
 	public static final int MAX_HEIGHT = 100;
 
     private int longitude;
@@ -28,9 +30,9 @@ public final class Coordinates {
     /**
      * Creates a new Coordinates instance.
      *
-     * @param longitude initial longitude (positive)
-     * @param latitude  initial latitude (positive)
-     * @param height    initial height (0-100)
+     * @param p_longitude initial longitude (positive)
+     * @param p_latitude  initial latitude (positive)
+     * @param p_height    initial height (0-100)
      */
     public Coordinates(int p_longitude, int p_latitude, int p_height) {
         this.longitude = rangedLongLat(p_longitude);
@@ -65,21 +67,38 @@ public final class Coordinates {
         this.height = rangedHeight(getHeight() + value);
     }
 
-    /** @return the longitude value */
+    /** 
+     * Returns the coordinate longitude.
+     * 
+     * @return the longitude value
+    */
     public int getLongitude() {
         return longitude;
     }
 
-    /** @return the latitude value */
+    /** 
+     * Returns the coordinate latitude.
+     * 
+     * @return the latitude value
+    */
     public int getLatitude() {
         return latitude;
     }
 
-    /** @return the height value */
+    /** 
+     *  Returns the coordinate height.
+     * 
+     * @return the height value
+     * */
     public int getHeight() {
         return height;
     }
 
+    /** 
+     * Returns the sum of all coordinate values.
+     * 
+     * @return the sum of longitude, latitude and height
+    */
     public int sum() {
         return this.longitude + this.latitude + this.height;
     }
