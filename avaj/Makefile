@@ -8,16 +8,16 @@ JAVADOC = javadoc
 # =====================
 # Project structure
 # =====================
-SRC_ROOT = main/java
-BIN_DIR  = bin
-DOCS_DIR  = ../docs
+CLASSPATH = main/java
+BIN  = bin
+DOCS  = ../docs
 MAIN  = com.ft.pckg.simulator.Simulator
-SCENE = test/resources/scenario.txt
+SCENARIO = test/resources/scenario.txt
 
 # =====================
 # Find all source files
 # =====================
-SOURCES := $(shell find $(SRC_ROOT) -name "*.java")
+SOURCES := $(shell find $(CLASSPATH) -name "*.java")
 
 # =====================
 # Default target
@@ -28,27 +28,27 @@ all: compile run
 # Compile sources
 # =====================
 compile:
-	mkdir -p $(BIN_DIR)
-	$(JAVAC) -d $(BIN_DIR) -sourcepath $(SRC_ROOT) $(SOURCES)
+	mkdir -p $(BIN)
+	$(JAVAC) -d $(BIN) -sourcepath $(CLASSPATH) $(SOURCES)
 
 # =====================
 # Run simulator
 # =====================
 run: compile
-	$(JAVA) -cp $(BIN_DIR) $(MAIN) $(SCENE)
+	$(JAVA) -cp $(BIN) $(MAIN) $(SCENARIO)
 
 # =====================
 # Docs constructor
 # =====================
 docs:
-	mkdir -p $(DOCS_DIR)
-	$(JAVADOC) -d $(DOCS_DIR) -sourcepath main/java $(SOURCES)
+	mkdir -p $(DOCS)
+	$(JAVADOC) -d $(DOCS) -sourcepath main/java $(SOURCES)
 
 
 # =====================
 # Clean build artifacts
 # =====================
 clean:
-	rm -rf $(BIN_DIR) $(DOCS_DIR)
+	rm -rf $(BIN) $(DOCS)
 
 .PHONY: all compile run docs clean
