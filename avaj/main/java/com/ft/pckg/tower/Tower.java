@@ -22,8 +22,8 @@ public abstract class Tower {
     protected List<Flyable> observers = new ArrayList<>();
 
 
-    /** Default constructor. */
-    public Tower() {}
+    /** Protected constructor to prevent direct instantiation out of subclass and package. */
+    protected Tower() {}
 
     /**
      * Registers a Flyable observer.
@@ -53,7 +53,7 @@ public abstract class Tower {
      * if observers unregister themselves during notification.
      * </p>
      */
-    protected void notifyObservers() {
+    protected void conditionChanged() {
         List<Flyable> snapshot = new ArrayList<>(observers);
         for (Flyable f : snapshot) {
             f.updateConditions();

@@ -22,7 +22,7 @@ SOURCES := $(shell find $(SRC_ROOT) -name "*.java")
 # =====================
 # Default target
 # =====================
-all: compile
+all: compile run
 
 # =====================
 # Compile sources

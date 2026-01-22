@@ -12,8 +12,8 @@ import com.ft.pckg.utils.Coordinates;
  */
 public class AircraftFactory {
 
-    /** Default constructor. */
-    public AircraftFactory() {}
+    /** Private constructor to prevent external instantiation. */
+    private AircraftFactory() {}
 
     /**
      * Creates a new Flyable aircraft based on its type.

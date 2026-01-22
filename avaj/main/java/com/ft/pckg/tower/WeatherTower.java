@@ -18,7 +18,9 @@ import com.ft.pckg.weather.WeatherProvider;
 public class WeatherTower extends Tower {
 
     /** Default constructor. */
-    public WeatherTower() {}
+    public WeatherTower() {
+        super();
+    }
 
     /**
      * Returns the current weather for given coordinates.
@@ -34,6 +36,6 @@ public class WeatherTower extends Tower {
      * Triggers a weather change and notifies all Observers/Listeners.
      */
     public void changeWeather() {
-        notifyObservers();
+        conditionChanged();
     }
 }
