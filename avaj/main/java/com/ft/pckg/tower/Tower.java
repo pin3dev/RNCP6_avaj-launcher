@@ -5,22 +5,21 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Abstract class representing a Subject in the Observer pattern.
+ * Base class representing a Subject in the Observer pattern.
  *
  * <p>
  * Manages registration, unregistration and notification
- * of Flyable (abstract Observers/Listeners).
+ * of Flyable (Base Observers/Listeners).
  * </p>
  * 
  * <p>
- * Design Pattern used: Observer (Abstract Observable/Publisher/Subject).
+ * Design Pattern used: Observer (Base Observable/Publisher/Subject).
  * </p>
  */
-public abstract class Tower {
+public class Tower {
 
-    /** List of registered listeners. */
-    protected List<Flyable> observers = new ArrayList<>();
-
+    /** List of registered listeners. Still the same */
+    private final List<Flyable> observers = new ArrayList<>();
 
     /** Protected constructor to prevent direct instantiation out of subclass and package. */
     protected Tower() {}
@@ -31,6 +30,8 @@ public abstract class Tower {
      * @param flyable the observer to register
      */
     public void register(Flyable flyable) {
+        if(flyable == null) 
+            throw new IllegalArgumentException("Flyable cannot be null.");
         observers.add(flyable);
         System.out.println("[Tower]: " + flyable + " registered to weather tower.");
     }
@@ -41,6 +42,8 @@ public abstract class Tower {
      * @param flyable the observer to unregister
      */
     public void unregister(Flyable flyable) {
+        if(flyable == null) 
+            throw new IllegalArgumentException("Flyable cannot be null.");
         observers.remove(flyable);
         System.out.println("[Tower]: " + flyable + " unregistered from weather tower.");
     }

@@ -11,9 +11,9 @@ package com.ft.pckg.utils;
 public final class Coordinates {
 
     /** Minimum allowed value for longitude, latitude and height*/
-    public static final int MIN_VALUE = 0;
+    private static final int MIN_VALUE = 0;
     /** Maximum allowed value for height */
-	public static final int MAX_HEIGHT = 100;
+	private static final int MAX_HEIGHT = 100;
 
     private int longitude;
     private int latitude;

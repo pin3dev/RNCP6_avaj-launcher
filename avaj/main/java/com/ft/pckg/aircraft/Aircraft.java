@@ -36,7 +36,7 @@ public abstract class Aircraft implements Flyable {
      *
      * @return emoji string
      */
-    protected abstract String getAircraftEmoji();
+    // protected abstract String getAircraftEmoji();
 
 
     /**  
@@ -59,6 +59,8 @@ public abstract class Aircraft implements Flyable {
      * @param coordinates initial coordinates
      */
     protected Aircraft(String name, Coordinates coordinates) {
+        if (coordinates == null)
+            throw new IllegalArgumentException("Coordinates cannot be null");
         this.id = ++idCounter;
         this.name = name;
         this.coordinates = coordinates;
@@ -71,6 +73,9 @@ public abstract class Aircraft implements Flyable {
      */
     @Override
     public void registerTower(WeatherTower weatherTower) {
+        if(weatherTower == null) 
+            throw new IllegalArgumentException("WeatherTower cannot be null.");
+        
         this.weatherTower = weatherTower;
         weatherTower.register(this);
 
@@ -80,7 +85,7 @@ public abstract class Aircraft implements Flyable {
      * Handles aircraft landing and unregistration from the WeatherTower.
      */
     protected void land() {
-        System.out.println("[Aircraft]: " + this + " landing.");
+        System.out.println(/* "[Aircraft]: " + */ this + ": landing.");
         weatherTower.unregister(this);
     }
     
@@ -101,8 +106,12 @@ public abstract class Aircraft implements Flyable {
      * @param weather the current weather condition
      */
     protected final void applyWeather(Weather weather) {
+        if (weather == null)
+            throw new IllegalArgumentException("Weather cannot be null");
+            
         weather.apply(this);
-        System.out.println("[ " + this + " ] "
+        System.out.println(/* "[ " + */ this /* + " ] " */
+            + ": " 
             + weather.getWeatherMessage()
             + " "
             + weather.getWeatherEmoji());
@@ -115,6 +124,7 @@ public abstract class Aircraft implements Flyable {
      */
     @Override
     public final String toString() {
-        return getAircraftEmoji() + " " + getClass().getSimpleName() + "#" + name + "(" + id + ")";
+        return /* getAircraftEmoji() + " " + */ getClass().getSimpleName() + "#" + name + "(" + id + ")";
+
     }
 }

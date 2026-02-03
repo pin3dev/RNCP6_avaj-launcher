@@ -44,6 +44,9 @@ public class WeatherProvider {
      * @return a string representing the current weather
      */
     public String getCurrentWeather(Coordinates coordinates) {
+        if (coordinates == null)
+            throw new IllegalArgumentException("Coordinates cannot be null");
+            
         int sum = coordinates.sum();
         int index = Math.abs(sum) % VALUES.length;
         return VALUES[index].name();

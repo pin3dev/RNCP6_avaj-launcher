@@ -44,6 +44,7 @@ public class Simulator {
 
         } catch (Exception e) {
             System.out.println("Error: " + e.getMessage());
+            //e.printStackTrace();
         }
     }
 }

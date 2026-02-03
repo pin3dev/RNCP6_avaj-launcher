@@ -64,9 +64,9 @@ public class Balloon extends Aircraft {
     /**
      * Returns the emoji representation of the balloon.
      */
-    @Override
-    protected String getAircraftEmoji() {
-        return "🎈";
-    }
+    // @Override
+    // protected String getAircraftEmoji() {
+    //     return "🎈";
+    // }
 
 }

@@ -1,1 +1,0 @@
-packageSearchIndex = [{"l":"All Packages","u":"allpackages-index.html","k":"18"},{"l":"com.ft.pckg.aircraft"},{"l":"com.ft.pckg.aircraft.type"},{"l":"com.ft.pckg.simulator"},{"l":"com.ft.pckg.tower"},{"l":"com.ft.pckg.utils"},{"l":"com.ft.pckg.weather"}];updateSearchResults();
